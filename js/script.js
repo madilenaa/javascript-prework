@@ -29,3 +29,47 @@ else(playerInput == '3'){
   playerMove = 'nożyce';
 }
 printMessage('Twój ruch to: ' + playerMove);
+
+//Wynik dla komputer-kamień
+if (computerMove == 'kamień' && playerMove == 'kamień') {
+printMessage ('Remis!');
+}
+else if(computerMove == 'kamień' && playerMove == 'papier'){
+  printMessage('Wygrywasz!');
+}
+else(computerMove == 'kamień' && playerMove == 'nożyce') {
+printMessage('Przegrywasz');
+}
+
+//Wyniki dla komputer-papier
+if(computerMove == 'papier' && playerMove == 'kamień') {
+  printMessage ('Przegrywasz');
+}
+else if (computerMove == 'papier' && playerMove == 'papier') {
+printMessage ('Remis');
+}
+else(computerMove == 'papier' && playerMove == 'nożyce') {
+printMessage ('Wygrywasz');
+}
+
+//Wyniki dla komputer-nożyce
+if(computerMove == 'nożyce' && playerMove == 'kamień') {
+  printMessage ('Wygrywasz');
+}
+else if (computerMove == 'nożyce' && playerMove == 'papier') {
+printMessage ('Przegrywasz');
+}
+else(computerMove == 'nożyce' && playerMove == 'nożyce') {
+printMessage ('Remis');
+}
+
+//wynik dla błędnego wprowadzenia cyfry przez gracza
+if(playerMove == 'nieznany ruch' && computerMove == 'kamień') {
+  printMessage ('Błąd! Wprowadź cyfrę od 1 do 3!');
+}
+else if (playerMove == 'nieznany ruch' && computerMove == 'papier') {
+printMessage('Błąd! Wprowadź cyfrę od 1 do 3!');
+}
+else(playerMove == 'nieznany ruch' && computerMove == 'nożyce') {
+printMessage('Błąd! Wprowadź cyfrę od 1 do 3!')
+}

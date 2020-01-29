@@ -33,11 +33,12 @@ function playGame(playerInput){
       console.log('moves:', argComputerMove, argPlayerMove);
 
     //Wynik dla komputer-kamień
-    if(argComputerMove == 'kamień' && argPlayerMove == 'kamień') {
+    if(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
       return('Remis!');
     } else if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
       return('Wygrywasz!');
-    } else(argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
+    } else(argComputerMove == 'kamień' && argPlayerMove == 'nożyce')
+    {
       return('Przegrywasz');
     }
 
@@ -46,7 +47,8 @@ function playGame(playerInput){
       return('Przegrywasz');
     } else if (argComputerMove == 'papier' && argPlayerMove == 'papier') {
       return('Remis');
-    } else(argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
+    } else(argComputerMove == 'papier' && argPlayerMove == 'nożyce')
+    {
       return('Wygrywasz');
     }
 
@@ -55,7 +57,8 @@ function playGame(playerInput){
       return('Wygrywasz');
     } else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
       return('Przegrywasz');
-    } else(argComputerMove == 'nożyce' && argPlayerMove == 'nożyce') {
+    } else(argComputerMove == 'nożyce' && argPlayerMove == 'nożyce')
+    {
       return('Remis');
     }
 

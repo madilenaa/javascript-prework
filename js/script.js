@@ -1,7 +1,7 @@
-function playGame(playerInput){
+function playGame(playerInput) {
   clearMessages ();
   function getMoveName(argMoveId) {
-    if(argMoveId == 1){
+    if (argMoveId == 1) {
       return 'kamień';
     } else if (argMoveId == '2') {
         return 'papier';
@@ -20,7 +20,6 @@ function playGame(playerInput){
   } else if (randomNumber == 2){
   @@ -26,7 +28,7 @@ */
   printMessage('Mój ruch to: ' + argComputerMove);
-
     console.log('Gracz wpisał: ' + playerInput);
 
   let argPlayerMove = getMoveName (playerInput);
@@ -29,26 +28,24 @@ function playGame(playerInput){
   } else if (playerInput == '2'){
   @@ -37,33 +39,33 @@ let playerMove = getMoveName (randomNumber);
   printMessage('Twój ruch to: ' + argPlayerMove);*/
-  function displayResult(argComputerMove, argPlayerMove){
+  function displayResult(argComputerMove, argPlayerMove) {
       console.log('moves:', argComputerMove, argPlayerMove);
 
     //Wynik dla komputer-kamień
-    if(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
+    if (argComputerMove == 'kamień' && argPlayerMove == 'kamień') {
       return('Remis!');
-    } else if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+    } else if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
       return('Wygrywasz!');
-    } else(argComputerMove == 'kamień' && argPlayerMove == 'nożyce')
-    {
+    } else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
       return('Przegrywasz');
     }
 
     //Wyniki dla komputer-papier
-    if(argComputerMove == 'papier' && argPlayerMove == 'kamień') {
+    if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
       return('Przegrywasz');
     } else if (argComputerMove == 'papier' && argPlayerMove == 'papier') {
       return('Remis');
-    } else(argComputerMove == 'papier' && argPlayerMove == 'nożyce')
-    {
+    } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
       return('Wygrywasz');
     }
 
@@ -57,13 +54,12 @@ function playGame(playerInput){
       return('Wygrywasz');
     } else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
       return('Przegrywasz');
-    } else(argComputerMove == 'nożyce' && argPlayerMove == 'nożyce')
-    {
+    } else if (argComputerMove == 'nożyce' && argPlayerMove == 'nożyce') {
       return('Remis');
     }
 
     //wynik dla błędnego wprowadzenia cyfry przez gracza
-    if(argPlayerMove == 'nieznany ruch') {
+    if (argPlayerMove == 'nieznany ruch') {
       return('Błąd! Wprowadź cyfrę od 1 do 3!');
     }
   }
